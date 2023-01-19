@@ -2,7 +2,7 @@ name: React Project
 on: [push,workflow_dispatch]
 jobs:
   deploy:
-    runs-on: ubuntu-latest
+    runs-on: self-hosted
     steps:
       - name: action
         uses: actions/checkout@v3
