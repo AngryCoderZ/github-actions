@@ -5,7 +5,7 @@ on:
       - main
       - 'master-*' #master-abc master-abc-efg 
       - 'vite/**' #vite/abc/egf
-    paths:
+    paths-ignore:
     - '.github/workflows/*'
 jobs:
  filter:
