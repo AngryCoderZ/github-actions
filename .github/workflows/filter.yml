@@ -5,8 +5,8 @@ on:
       - main
       - "vite-*"  #vite-abc  vite-abc-efg
       - "vite/*"  #vite/abc 
-    # paths:
-    #   - './github/workflows/*'
+    paths-ignore:
+      - './github/workflows/*'
 jobs:
   filter:
     runs-on: ubuntu-latest
