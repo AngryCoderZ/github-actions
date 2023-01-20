@@ -1,8 +1,8 @@
-name: context
-on: push
-jobs:
-  test:
-    runs-on: ubuntu-latest
-    steps:
-      - name: github context
-        run:  echo "${{toJSON(github.repository_owner)}}"
+# name: context
+# on: push
+# jobs:
+#   test:
+#     runs-on: ubuntu-latest
+#     steps:
+#       - name: github context
+#         run:  echo "${{toJSON(github.repository_owner)}}"

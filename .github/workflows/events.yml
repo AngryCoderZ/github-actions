@@ -1,12 +1,12 @@
-name: event-trigger
-on: 
- pull_request:
-   types:
-     - opened
- workflow_dispatch:
-jobs:
-  activity:
-    runs-on: ubuntu-latest
-    steps:
-      - name: print data
-        run: echo "working master branch"
+# name: event-trigger
+# on: 
+#  pull_request:
+#    types:
+#      - opened
+#  workflow_dispatch:
+# jobs:
+#   activity:
+#     runs-on: ubuntu-latest
+#     steps:
+#       - name: print data
+#         run: echo "working master branch"
