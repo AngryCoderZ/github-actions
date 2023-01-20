@@ -5,4 +5,4 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: github context
-        run:  echo "${{toJSON(github)}}"
+        run:  echo "${{toJSON(github.repository_owner)}}"
