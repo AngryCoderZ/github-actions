@@ -6,6 +6,8 @@ jobs:
     steps:
       - name: print first job
         run: echo "first job"
+      - name: install dependencies
+        run: cpm ci
   second-job: 
     needs: first-job
     runs-on: ubuntu-latest
