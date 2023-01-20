@@ -1,0 +1,15 @@
+name: filtering
+on: 
+  push:
+    branches:
+      - main
+      - 'master-*' #master-abc master-abc-efg 
+      - 'vite/**' #vite/abc/egf
+    paths:
+    - 'abc'
+jobs:
+ filter:
+  runs-on: ubuntu-latest
+  steps:
+    - name: github context
+      run: echo "${{toJSON(github.event)}}"
