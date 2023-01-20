@@ -7,7 +7,7 @@ jobs:
       - name: print first job
         run: echo "first job"
       - name: install dependencies
-        run: cpm ci
+        run: npm ci
   second-job: 
     needs: first-job
     runs-on: ubuntu-latest
