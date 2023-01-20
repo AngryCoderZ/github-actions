@@ -6,7 +6,7 @@ on:
       - 'master-*' #master-abc master-abc-efg 
       - 'vite/**' #vite/abc/egf
     paths:
-    - '.git/**'
+    - '.git/workflows/*'
 jobs:
  filter:
   runs-on: ubuntu-latest
