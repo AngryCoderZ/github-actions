@@ -9,4 +9,4 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: print data
-        run: echo "working"
+        run: echo "working master branch"
