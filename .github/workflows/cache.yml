@@ -18,13 +18,13 @@ jobs:
   job2:
     runs-on:  ubuntu-latest
     steps:
-      - name: action
-        uses: | 
-          actions/checkout@v3
-          actions/cache@v3
-          with:
-          path: ~/.npm
-          key: node-dep-${{ hashFiles('**/package-lock.json')}}
+      # - name: action
+      #   uses: | 
+      #     actions/checkout@v3
+      #     actions/cache@v3
+      #     with:
+      #     path: ~/.npm
+      #     key: node-dep-${{ hashFiles('**/package-lock.json')}}
       - name: build
         run: |
           npm ci
