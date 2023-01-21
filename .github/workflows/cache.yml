@@ -10,12 +10,13 @@ jobs:
         uses: actions/cache@v3
         with:
           path: ~/.npm
-          key: node-${{ hashFiles('**/package-lock.json')}}
+          key: node-dep-${{ hashFiles('**/package-lock.json')}}
       - name: build
         run: |
           npm ci
           npm run build
   job2:
+    needs: job1
     runs-on:  ubuntu-latest
     steps:
       - name: checkout action
@@ -24,7 +25,7 @@ jobs:
         uses: actions/cache@v3
         with:
           path: ~/.npm
-          key: node-${{ hashFiles('**/package-lock.json')}}
+          key: node-dep-${{ hashFiles('**/package-lock.json')}}
       - name: build
         run: |
           npm ci
