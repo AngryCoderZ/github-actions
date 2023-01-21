@@ -4,8 +4,11 @@ env:
   APP_NAME: Demo App
 jobs:
   test:
+    # env:
+    #   PASSWORD: 123 
+    environment: testing  
     env:
-      PASSWORD: 123
+      PASSWORD2: ${{secrets.PASSWORD2}}
     runs-on: ubuntu-latest
     steps:
       - name: action
@@ -18,8 +21,8 @@ jobs:
       - name: Output
         run: |
           echo "app name:${{env.APP_NAME}}"
-          echo "password:${{env.PASSWORD}}"
-  doploy:
+          echo "password:${{env.PASSWORD2}}"
+  deploy:
     runs-on: ubuntu-latest
     steps:
       - name: Output
