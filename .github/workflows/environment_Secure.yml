@@ -24,4 +24,4 @@ jobs:
       run: | 
        echo "app name:${{env.APP_NAME}}"
        echo "app name:${{env.USER}}"
-       echo "password:${{env.PASSWORD2}}"
+       echo "password:${{env.PASSWORD}}"
