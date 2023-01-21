@@ -16,10 +16,11 @@ jobs:
         run: |
           echo "${{ env.name }}" 
       
-  # second-job: 
-  #   needs: first-job
-  #   runs-on: ubuntu-latest
-  #   steps:
-  #     - name: print second job
-  #       run: echo ${{env.name}}
+  second-job: 
+    needs: first-job
+    runs-on: ubuntu-latest
+    steps:
+      - name: print second job
+        run: |
+          echo "${{ env.name }}" 
         
