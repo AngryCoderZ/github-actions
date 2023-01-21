@@ -1,0 +1,16 @@
+name: multi-job
+on: [push,workflow_dispatch]
+jobs:
+  first-job:
+    runs-on: ubuntu-latest
+    steps:
+      - name: perform
+        id: var_step
+        run: echo "::set-output name=var1::demo data"
+      
+  second-job: 
+    needs: first-job
+    runs-on: ubuntu-latest
+    steps:
+      - name: print second job
+        run: echo ${{steps.var_steps.outputs.var1}}
