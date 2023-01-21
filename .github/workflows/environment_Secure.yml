@@ -15,7 +15,7 @@ jobs:
   deploy:
    environment: testing
    env:
-     USER: ${{environment.USER}}
+     USER: ${{vars.USER}}
      PASSWORD: ${{secrets.PASSWORD2}}
    needs: test
    runs-on: ubuntu-latest
