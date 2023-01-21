@@ -1,0 +1,13 @@
+#pass data between steps
+
+name: set Color
+on: push
+jobs:
+ test:
+  runs-on: ubuntu-latest
+  steps: 
+    - name: Set Color
+      id: demo
+      run: echo "color=green" >> $GITHUB_OUTPUT
+    - name: get Color
+      run:  echo "The selected color is ${{steps.demo.outputs.color}}"

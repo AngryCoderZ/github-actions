@@ -1,20 +1,20 @@
-name: filtering
-on: 
-  push:
-    branches:
-      - main
-      - 'master-*' #master-abc master-abc-efg 
-      - 'vite/**' #vite/abc/egf
-      - '!random**'   #randomewew
-    paths:
-    - '.github/workflows/*'
-    - '!abc/**'
-    # paths-ignore:
-    # - '.github/workflows/*'
-     #commit -m "added [skip actions]"
-jobs:
- filter:
-  runs-on: ubuntu-latest
-  steps:
-    - name: github context
-      run: echo "${{toJSON(github.event)}}"
+# name: filtering
+# on: 
+#   push:
+#     branches:
+#       - main
+#       - 'master-*' #master-abc master-abc-efg 
+#       - 'vite/**' #vite/abc/egf
+#       - '!random**'   #randomewew
+#     paths:
+#     - '.github/workflows/*'
+#     - '!abc/**'
+#     # paths-ignore:
+#     # - '.github/workflows/*'
+#      #commit -m "added [skip actions]"
+# jobs:
+#  filter:
+#   runs-on: ubuntu-latest
+#   steps:
+#     - name: github context
+#       run: echo "${{toJSON(github.event)}}"
