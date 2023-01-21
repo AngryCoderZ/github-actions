@@ -1,4 +1,4 @@
-name: multi-job
+name: output-job
 on: [push,workflow_dispatch]
 jobs:
   first-job:
@@ -14,3 +14,4 @@ jobs:
     steps:
       - name: print second job
         run: echo ${{steps.var_steps.outputs.var1}}
+        # 
