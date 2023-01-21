@@ -11,7 +11,7 @@ on:
     - '!abc/**'
     # paths-ignore:
     # - '.github/workflows/*'
-     
+     #commit -m "added [skip actions]"
 jobs:
  filter:
   runs-on: ubuntu-latest
