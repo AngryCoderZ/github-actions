@@ -1,0 +1,15 @@
+name: Environment
+on: [push,workflow_dispatch]
+jobs:
+  test:
+   env:
+     APP_NAME: Demo App
+   runs-on: ubuntu-latest
+   steps: 
+    - name: Output
+      run: echo "app name:${{env.APP_NAME}}"
+  deploy:
+   runs-on: ubuntu-latest
+   steps: 
+    - name: Output
+      run: echo "app name:${{env.APP_NAME}}"

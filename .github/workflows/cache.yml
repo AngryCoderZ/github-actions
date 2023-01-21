@@ -1,32 +1,32 @@
-name: React Project
-on: [push,workflow_dispatch]
-jobs:
-  job1:
-    runs-on:  ubuntu-latest
-    steps:
-      - name: checkout action
-        uses: actions/checkout@v3
-      - name: cache actions 
-        uses: actions/cache@v3
-        with:
-          path: ~/.npm
-          key: node-dep-${{ hashFiles('**/package-lock.json')}}
-      - name: build
-        run: |
-          npm ci
-          npm run build
-  job2:
-    needs: job1
-    runs-on:  ubuntu-latest
-    steps:
-      - name: checkout action
-        uses: actions/checkout@v3
-      - name: cache actions 
-        uses: actions/cache@v3
-        with:
-          path: ~/.npm
-          key: node-dep-${{ hashFiles('**/package-lock.json')}}
-      - name: build
-        run: |
-          npm ci
-          npm run build
+# name: React Project
+# on: [push,workflow_dispatch]
+# jobs:
+#   job1:
+#     runs-on:  ubuntu-latest
+#     steps:
+#       - name: checkout action
+#         uses: actions/checkout@v3
+#       - name: cache actions 
+#         uses: actions/cache@v3
+#         with:
+#           path: ~/.npm
+#           key: node-dep-${{ hashFiles('**/package-lock.json')}}
+#       - name: build
+#         run: |
+#           npm ci
+#           npm run build
+#   job2:
+#     needs: job1
+#     runs-on:  ubuntu-latest
+#     steps:
+#       - name: checkout action
+#         uses: actions/checkout@v3
+#       - name: cache actions 
+#         uses: actions/cache@v3
+#         with:
+#           path: ~/.npm
+#           key: node-dep-${{ hashFiles('**/package-lock.json')}}
+#       - name: build
+#         run: |
+#           npm ci
+#           npm run build
