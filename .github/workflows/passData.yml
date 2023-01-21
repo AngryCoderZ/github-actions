@@ -7,6 +7,14 @@ jobs:
       - name: perform
         id: step_one
         run: echo "name=abc" >> $GITHUB_ENV
+      - name: Set the value
+        id: step_one
+        run: |
+          echo "action_state=yellow" >> $GITHUB_ENV
+      - name: Use the value
+        id: step_two
+        run: |
+          echo "${{ env.action_state }}" 
       
   second-job: 
     needs: first-job
