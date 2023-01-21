@@ -4,9 +4,9 @@ jobs:
   first-job:
     runs-on: ubuntu-latest
     steps:
-      - name: perform
-        id: step_one
-        run: echo "name=abc" >> $GITHUB_ENV
+      # - name: perform
+      #   id: step_one
+      #   run: echo "name=abc" >> $GITHUB_ENV
       - name: Set the value
         id: step_one
         run: |
@@ -16,10 +16,10 @@ jobs:
         run: |
           echo "${{ env.action_state }}" 
       
-  second-job: 
-    needs: first-job
-    runs-on: ubuntu-latest
-    steps:
-      - name: print second job
-        run: echo ${{env.name}}
-        # 
+  # second-job: 
+  #   needs: first-job
+  #   runs-on: ubuntu-latest
+  #   steps:
+  #     - name: print second job
+  #       run: echo ${{env.name}}
+        
