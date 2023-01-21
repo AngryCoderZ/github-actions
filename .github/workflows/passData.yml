@@ -4,24 +4,16 @@ jobs:
   first-job:
     runs-on: ubuntu-latest
     steps:
-      # - name: perform
-      #   id: step_one
-      #   run: echo "name=abc" >> $GITHUB_ENV
-      - name: Set the value
-        id: step_one
-        run: |
-          echo "name=yellow" >> $GITHUB_ENV
-      - name: Use the value
-        id: step_two
-        run: |
-          echo "${{ env.name }}" 
+      - name: Set color
+        id: random-color-generator
+        run: echo "SELECTED_COLOR=green" >> $GITHUB_OUTPUT
+      - name: Get color
+        run: echo "The selected color is ${{ steps.random-color-generator.outputs.SELECTED_COLOR }}"
       
   second-job: 
     needs: first-job
     runs-on: ubuntu-latest
     steps:
-      - name: print second job
-        id: step_three
-        run: |
-          echo "${{ env.name }}" 
+      - name: Get color
+        run: echo "The selected color is ${{ steps.random-color-generator.outputs.SELECTED_COLOR }}"
         
