@@ -15,5 +15,5 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Get color
-        run: echo "The selected color is ${{ needs.first-job.random.outputs.SELECTED_COLOR }}"
+        run: echo "The selected color is ${{ needs.first-job.outputs.SELECTED_COLOR }}"
         
